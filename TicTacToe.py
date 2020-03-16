@@ -1,5 +1,5 @@
 DIM = 3
-
+NUM_OF_PLAYERS = 2
 
 def main():
     while True:
@@ -41,7 +41,7 @@ def start():
 
             break
 
-        player += 1
+        player = (player + 1) % NUM_OF_PLAYERS
         counter -= 1
 
     if counter < 0:  # if the counter reached to zero so the game ended with draw
