@@ -143,14 +143,11 @@ def checkDiagonal(board):
             if currVal != board[row][col]:
                 res = False
 
-    if res:
-        return True
-
-    return False
+    return res
 
 
 def makeMove(board, row, col, move):
-    if board[row][col] != 'X' and board[row][col]:
+    if board[row][col] != 'X' and board[row][col] != 'O':
         board[row][col] = move
         return True
     else:
